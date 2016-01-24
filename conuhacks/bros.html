@@ -1,0 +1,29 @@
+<!-- DOCTYPE HTML -->
+<head>
+<script type="text/javascript" src="http://crypto-js.googlecode.com/files/2.0.0-crypto-sha1.js"></script>
+<script type="text/javascript" src="http://crypto-js.googlecode.com/files/2.0.0-hmac-min.js"></script>
+<script type="text/javascript">
+
+
+var request = new XMLHttpRequest();
+var sharedSecret = "ec94e8fc8be7483f810a81f7cba32c14";
+var consumerKey = "916c5699f1614b4bb2b939a76df609b1";
+var timeStamp = new Date().getTime();
+var command = "foods.search";
+var foodID = "1738"; 
+var message = "GET&http%3A%2F%2Fplatform.fatsecret.com%2Frest%2Fserver.api&a%3Dfood.search%26%26oauth_consumer_key%"+consumerKey+"%26oauth_nonce%3Dabc%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D" + timeStamp + "%26oauth_version%3D1.0%26z%3Dbar";
+
+var hmac = Crypto.HMAC(Crypto.SHA1, message, sharedSecret);
+console.log(hmac);
+var hmacString = Crypto.HMAC(Crypto.SHA1, message, sharedSecret, { asString: true });
+var hmacBytes = Crypto.HMAC(Crypto.SHA1, message, sharedSecret, { asBytes: true });
+
+console.log(hmacString);
+var web = "http://platform.fatsecret.com/rest/server.api?food_id=1738&method=food.get&oauth_consumer_key=" + consumerKey +"&oauth_nonce=1234&oauth_signature="+hmac+"&oauth_signature_method=HMAC-SHA1&oauth_timestamp="+timeStamp+"&oauth_version=1.0"
+
+console.log(message);
+request.open("GET", web, "false");
+console.log(request.status);
+console.log(web);
+</script>
+</head>

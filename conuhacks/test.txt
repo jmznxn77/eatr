@@ -1,0 +1,1 @@
+{"access_token": "cddlYIWhNfqPlrCnHPWPFwgL3R5qYS", "token_type": "Bearer", "expires_in": 36000, "scope": "api_access_write api_access api_access_read"}

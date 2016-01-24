@@ -1,0 +1,5 @@
+human
+beef
+burger
+chicken
+ice cream

@@ -1,0 +1,10 @@
+orange
+person
+human
+beef
+burger
+chicken
+meat
+bowl
+plate
+ice cream

@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Sample Code</title>
+		<style>
+			body
+			{
+				font-family: Arial;
+				font-size: 12px;
+			}
+			.title{
+				font-size: 200%;
+				font-weight:bold;
+				margin-bottom:20px;
+			}
+			.holder{
+				width:300px;
+				margin:0 auto;
+				padding: 10px;
+			}
+		</style>
+		
+		<script src="http://platform.fatsecret.com/js?key=916c5699f1614b4bb2b939a76df609b1&amp;auto_template=false&amp;theme=none"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+		<script>
+			function doLoad(){
+				fatsecret.setContainer('container');
+				var first = location.search.substring(8);
+				console.log(first);
+				fatsecret.setCanvas("food.get", {food_id: first});
+			}
+
+		</script>
+	</head>
+	<body onload="doLoad()">
+		
+		<div class="holder">
+			<div class="title"><script>fatsecret.writeHolder("foodtitle");</script></div> 
+
+			<script>fatsecret.writeHolder("nutritionpanel");</script>
+			<div id="container"></div>
+		</div>
+	</body>
+</html>

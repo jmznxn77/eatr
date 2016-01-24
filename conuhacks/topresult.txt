@@ -1,0 +1,19 @@
+{
+    "list": {
+        "q": "butter",
+        "sr": "28",
+        "start": 0,
+        "end": 1,
+        "total": 121,
+        "group": "",
+        "sort": "r",
+        "item": [
+            {
+                "offset": 0,
+                "group": "Fats and Oils",
+                "name": "Margarine-like, margarine-butter blend, soybean oil and butter",
+                "ndbno": "04585"
+            }
+        ]
+    }
+}
